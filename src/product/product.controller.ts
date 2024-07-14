@@ -27,6 +27,10 @@ export class ProductController {
           if (!productId) {
               const product = await this.productService.create()
               productId = product.id
+          }else{
+            const product = await this.productService.findByID(productId)
+            
+            if(!product) throw new Error('Product not found')
           }
           
           if (body.productTranslateItems.length) {

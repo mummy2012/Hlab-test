@@ -21,4 +21,13 @@ export class ProductService {
         }
     }
 
+    async findByID(id:string):Promise<Product | undefined> {
+        try {
+            return await this.productRepository.findOneBy({id:id});
+        } catch(e) {
+            console.log(e?.message);
+            throw e;
+        }
+    }
+
 }
