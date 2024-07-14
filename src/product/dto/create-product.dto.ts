@@ -1,5 +1,5 @@
 import { IsArray, IsNotEmpty, IsOptional, IsString, ValidateNested } from 'class-validator';
-import { UpsertProductTranslateItem } from '../../product-translation/dto/product-translation-bulk-upsert.dto'
+import { UpsertProductTranslateItem } from '../../product-translation/dto/bulk-upsert-product-translation.dto'
 
 export class CreateProductDto {
   @IsString()

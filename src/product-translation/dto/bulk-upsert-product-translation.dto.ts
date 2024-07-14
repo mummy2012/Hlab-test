@@ -1,9 +1,9 @@
-import { IsArray, IsNotEmpty, IsString, ValidateNested } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
 export class UpsertProductTranslateItem {
     @IsString()
-    @IsNotEmpty()
-    productId:string;
+    @IsOptional()
+    productId?:string;
 
     @IsString()
     @IsNotEmpty()
