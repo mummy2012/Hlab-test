@@ -2,6 +2,8 @@ import { Injectable } from '@nestjs/common'
 import { Product } from './product.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { v4 as uuidv4 } from 'uuid'; 
+
 
 @Injectable()
 export class ProductService {
@@ -14,10 +16,19 @@ export class ProductService {
 
 	async create():Promise<Product> {
         try{
-            const newProduct = this.productRepository.create({});
-            return await this.productRepository.save(newProduct);
+            console.log('1');
+            
+            const newProduct = this.productRepository.create();
+            // Optionally, generate UUID if needed:
+            newProduct.id = uuidv4();
+            console.log('2');
+            
+            const savedProduct = await this.productRepository.save(newProduct);
+            console.log('3');
+            return savedProduct;
+            
         }catch(e){
-            console.log(e?.message);
+            throw new Error('Save failed');         
         }
     }
 
@@ -25,8 +36,7 @@ export class ProductService {
         try {
             return await this.productRepository.findOneBy({id:id});
         } catch(e) {
-            console.log(e?.message);
-            throw e;
+            throw new Error('Find failed');
         }
     }
 

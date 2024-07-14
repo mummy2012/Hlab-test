@@ -15,7 +15,7 @@ the project manager?
 
 
 3.Design and develop two APIs using NestJS and Postgres with the following
-    ผมมอง product เป็น 1 to many กับตัว translate เวลาหาใช้ key คู่เป็น id product กับ ตัวภาษา language นะครับ ท่าสร้างผมก็บ้่านๆบ้านนอกเลย ไม่มีดูบไป อิลาสติกเซิร์สอะไรทั้ง check  
+    ผมมอง product เป็น 1 to many กับตัว translate เวลาหาใช้ key คู่เป็น id product กับ ตัวภาษา language นะครับ ท่าสร้างผมก็ลูกทุ่งเลย validate id แล้วไป upsert 
 
 
 React Questions

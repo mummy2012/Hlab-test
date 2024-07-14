@@ -3,9 +3,7 @@ import { ProductController } from './product.controller';
 import { ProductService } from './product.service';
 import { ProductTranslationService } from '../product-translation/product-translation.service';
 import { CreateProductDto } from './dto/create-product.dto';
-import { Product } from './product.entity';
-import { Repository } from 'typeorm';
-import { getRepositoryToken } from '@nestjs/typeorm';
+
 
 describe('ProductController', () => {
   let controller: ProductController;
