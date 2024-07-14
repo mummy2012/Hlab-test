@@ -15,7 +15,7 @@ the project manager?
 
 
 3.Design and develop two APIs using NestJS and Postgres with the following
-    ผมมอง product เป็น 1 to many กับตัว translate เวลาหาใช้ key คู่เป็น id product กับ ตัวภาษา language นะครับ ท่าสร้างผมก็ลูกทุ่งเลย validate id แล้วไป upsert 
+    ผมมอง product เป็น 1 to many กับตัว translate เวลาหาใช้ key คู่เป็น id product กับ ตัวภาษา language นะครับ ท่าสร้างผมก็ลูกทุ่งเลย validate id แล้วไป upsert ที่ตัว translation
 
 
 React Questions
@@ -28,3 +28,6 @@ cache render ใช้คล้ายๆ userMemo แต่ Memo ไว้ใช
 Library.
 
 ข้อนี้ขอข้ามได้ไหมครับเพราะผมน่าจะใช้ chatgpt เขียนแล้วค่อยมาจูนอยู่ดี คิดว่าไม่ต่างจากไฟล์ userprofile-test.txt มากอย่างมากก็ซอยเคสย่อยเพิ่ม
+
+
+ปล.อันนี้ทำเละมากเลยครับขอโทษด้วยผมปั่นงานไม่ทันจริงๆ
