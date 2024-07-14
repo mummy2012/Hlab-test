@@ -15,16 +15,11 @@ export class ProductService {
 	}
 
 	async create():Promise<Product> {
-        try{
-            console.log('1');
-            
+        try{            
             const newProduct = this.productRepository.create();
-            // Optionally, generate UUID if needed:
             newProduct.id = uuidv4();
-            console.log('2');
             
             const savedProduct = await this.productRepository.save(newProduct);
-            console.log('3');
             return savedProduct;
             
         }catch(e){
